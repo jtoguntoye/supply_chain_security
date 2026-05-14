@@ -1,6 +1,12 @@
 name: Generate SBOM Report with Syft
 
 on:
+  workflow_dispatch:
+     inputs:
+       reason:
+        description: 'Reason for running'
+        required: false
+        default: 'Manual Run'
   push:
     branches:
       - master
